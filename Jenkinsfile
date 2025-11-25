@@ -5,7 +5,7 @@ pipeline {
         stage('Pull Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Blank721-ai/html_and_docker.git'
+                    url: 'https://github.com/Blank721-ai/project-1.git'
             }
         }
 
@@ -25,7 +25,7 @@ pipeline {
 
         stage('Run New Container') {
             steps {
-                sh 'docker run -d --name akm_web -p 8081:80 akm_web:1.0'
+                sh 'docker run -d --name akm_web -p 8086:80 akm_web:1.0'
             }
         }
     }
