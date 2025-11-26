@@ -5,28 +5,29 @@ pipeline {
         stage('Pull Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Blank721-ai/project-1.git'
+                    url: 'your repo url'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t akm_web:1.0 .'
+                sh 'docker build -t <yourwebname:1.0 or sometimg> .'
             }
         }
 
         stage('Stop Old Container') {
             steps {
                 script {
-                    sh 'docker rm -f akm_web || true'
+                    sh 'docker rm -f <yourwebname> || true'
                 }
             }
         }
 
         stage('Run New Container') {
             steps {
-                sh 'docker run -d --name akm_web -p 8086:80 akm_web:1.0'
+                sh 'docker run -d --name yourwebname(as you like) -p hostport:80 <yourwebname:1.0 or sometimg>'
             }
         }
     }
 }
+
