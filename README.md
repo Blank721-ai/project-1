@@ -1,6 +1,6 @@
 # Jenkins-Pipeline-Simple-Lab
 
-### That's my first time project by using jenkins.
+### That's my first project by using jenkins.
 
 
 # Hi,I'm Blank👋
